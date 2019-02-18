@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		895A8F57221911920068D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F56221911920068D195 /* AppDelegate.swift */; };
-		895A8F59221911920068D195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F58221911920068D195 /* ViewController.swift */; };
 		895A8F5C221911920068D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F5A221911920068D195 /* Main.storyboard */; };
 		895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
 		895A8F61221911930068D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F60221911930068D195 /* Assets.xcassets */; };
 		895A8F64221911930068D195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F62221911930068D195 /* LaunchScreen.storyboard */; };
-		895A8F6F221911930068D195 /* PageImageExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F6E221911930068D195 /* PageImageExampleTests.swift */; };
+		895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7A221912990068D195 /* PIEMainPageViewController.swift */; };
+		895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */; };
+		895A8F83221A907C0068D195 /* PIENetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */; };
+		895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */; };
+		895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
+		895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */; };
+		895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */; };
+		895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
+		895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,15 +36,21 @@
 /* Begin PBXFileReference section */
 		895A8F53221911920068D195 /* PageImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895A8F56221911920068D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		895A8F58221911920068D195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		895A8F5B221911920068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		895A8F5E221911920068D195 /* PageImageExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageImageExample.xcdatamodel; sourceTree = "<group>"; };
 		895A8F60221911930068D195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		895A8F63221911930068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		895A8F65221911930068D195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895A8F6A221911930068D195 /* PageImageExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PageImageExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		895A8F6E221911930068D195 /* PageImageExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageImageExampleTests.swift; sourceTree = "<group>"; };
 		895A8F70221911930068D195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		895A8F7A221912990068D195 /* PIEMainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEMainPageViewController.swift; sourceTree = "<group>"; };
+		895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIENetworkManager.swift; sourceTree = "<group>"; };
+		895A8F81221A907C0068D195 /* PageImageExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PageImageExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIENetworkManagerTests.swift; sourceTree = "<group>"; };
+		895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentOperationQueue.swift; sourceTree = "<group>"; };
+		895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentOperation.swift; sourceTree = "<group>"; };
+		895A8F8F221A9AD10068D195 /* PIEFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEFileManager.swift; sourceTree = "<group>"; };
+		895A8F92221A9B6C0068D195 /* PIECoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIECoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +93,12 @@
 			isa = PBXGroup;
 			children = (
 				895A8F56221911920068D195 /* AppDelegate.swift */,
-				895A8F58221911920068D195 /* ViewController.swift */,
-				895A8F5A221911920068D195 /* Main.storyboard */,
-				895A8F60221911930068D195 /* Assets.xcassets */,
-				895A8F62221911930068D195 /* LaunchScreen.storyboard */,
+				895A8F7C221A8A980068D195 /* Models */,
+				895A8F86221A94F70068D195 /* Views */,
+				895A8F792219120B0068D195 /* Controllers */,
+				895A8F89221A956F0068D195 /* Utility */,
 				895A8F65221911930068D195 /* Info.plist */,
-				895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */,
+				895A8F91221A9B430068D195 /* CoreData */,
 			);
 			path = PageImageExample;
 			sourceTree = "<group>";
@@ -93,10 +106,56 @@
 		895A8F6D221911930068D195 /* PageImageExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				895A8F6E221911930068D195 /* PageImageExampleTests.swift */,
 				895A8F70221911930068D195 /* Info.plist */,
+				895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */,
+				895A8F81221A907C0068D195 /* PageImageExampleTests-Bridging-Header.h */,
 			);
 			path = PageImageExampleTests;
+			sourceTree = "<group>";
+		};
+		895A8F792219120B0068D195 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F5A221911920068D195 /* Main.storyboard */,
+				895A8F7A221912990068D195 /* PIEMainPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		895A8F7C221A8A980068D195 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		895A8F86221A94F70068D195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		895A8F89221A956F0068D195 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */,
+				895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */,
+				895A8F8F221A9AD10068D195 /* PIEFileManager.swift */,
+				895A8F62221911930068D195 /* LaunchScreen.storyboard */,
+				895A8F60221911930068D195 /* Assets.xcassets */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		895A8F91221A9B430068D195 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */,
+				895A8F92221A9B6C0068D195 /* PIECoreData.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +211,7 @@
 					};
 					895A8F69221911930068D195 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 895A8F52221911920068D195;
 					};
 				};
@@ -200,9 +260,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				895A8F59221911920068D195 /* ViewController.swift in Sources */,
 				895A8F57221911920068D195 /* AppDelegate.swift in Sources */,
+				895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */,
+				895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */,
 				895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */,
+				895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */,
+				895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */,
+				895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */,
+				895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				895A8F6F221911930068D195 /* PageImageExampleTests.swift in Sources */,
+				895A8F83221A907C0068D195 /* PIENetworkManagerTests.swift in Sources */,
+				895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */,
+				895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExampleTests/Info.plist;
@@ -411,6 +481,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PageImageExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PageImageExampleTests/PageImageExampleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageImageExample.app/PageImageExample";
@@ -422,6 +494,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExampleTests/Info.plist;
@@ -432,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PageImageExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PageImageExampleTests/PageImageExampleTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PageImageExample.app/PageImageExample";

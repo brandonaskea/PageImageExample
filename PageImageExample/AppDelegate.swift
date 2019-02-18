@@ -74,6 +74,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
+    
+    lazy var managedObjectModel: NSManagedObjectModel = {
+        let modelURL = Bundle.main.url(forResource: "PageImageExample", withExtension: "momd")!
+        return NSManagedObjectModel(contentsOf: modelURL)!
+    }()
+    
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
+        let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+        let url = PIEFileManager().documentsDirctory.appendingPathComponent("PageImageExampleCoreData.sqlite")
+        do {
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+        
+        return coordinator
+    }()
+    
+    lazy var managedObjectContext: NSManagedObjectContext = {
+        let coordinator = self.persistentStoreCoordinator
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = coordinator
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(mergeChanges), name: NSNotification.Name.NSManagedObjectContextDidSave, object: nil)
+        return managedObjectContext
+    }()
+    
+    @objc func updateMainContext(notification: NSNotification){
+        self.managedObjectContext.mergeChanges(fromContextDidSave: notification as Notification)
+    }
+    
+    @objc func mergeChanges(notification: NSNotification){
+        if (notification.object as! NSManagedObjectContext != self.managedObjectContext) {
+            self.performSelector(onMainThread: #selector(updateMainContext), with: notification, waitUntilDone: false)
+        }
+        
+    }
 
     func saveContext () {
         let context = persistentContainer.viewContext
