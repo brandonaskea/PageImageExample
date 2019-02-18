@@ -10,7 +10,7 @@ import UIKit
 
 class PIEContentViewController: UIViewController {
     
-    var content: PIEContent!
+    public var content: PIEContent!
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,15 +9,29 @@
 import UIKit
 
 let mainPageErrorMessage = "The was an error loading the main page."
+let pullToRefreshNotification = "refresh"
+
+@objc protocol PIEMainPageViewControllerDelegate {
+    func didFinishRefreshing()
+}
 
 class PIEMainPageViewController: UIPageViewController {
     
-    var content:[PIEContent] = []
-    var contentViewControllers:[UIViewController] = []
-
-    override func viewDidLoad() {
+    private var contentViewControllers:[UIViewController] = []
+    private var isRefreshing: Bool = false;
+    @objc public var del:PIEMainPageViewControllerDelegate!
+    
+    override internal func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
+        self.view.backgroundColor = .black
+        refresh()
+    }
+    
+    @objc public func refresh() {
+        /*
+            Load the content
+        */
         PIENetworkManager().downloadImageContent { (errorMessage, content) in
             if let errorMessage = errorMessage {
                 self.presentAlertWith(errorMessage)
@@ -28,7 +42,32 @@ class PIEMainPageViewController: UIPageViewController {
         }
     }
     
-    func presentAlertWith(_ errorMessage: String) {
+    private func loadViewControllersFor(_ content: [PIEContent]) {
+        /*
+            Iterate through the content
+            objects and create the view
+            controllers that the
+            UIPageViewController will
+            display.
+        */
+        self.contentViewControllers.removeAll()
+        for c in content {
+            guard let vc = UIStoryboard(name: "Content", bundle: .main).instantiateInitialViewController() as? PIEContentViewController else { continue }
+            vc.content = c
+            self.contentViewControllers.append(vc)
+        }
+        DispatchQueue.main.async {
+            if let firstVC = self.contentViewControllers.first {
+                self.setViewControllers([firstVC], direction: .forward, animated: false, completion: nil)
+            }
+            else {
+                self.presentAlertWith(mainPageErrorMessage)
+            }
+            self.del.didFinishRefreshing()
+        }
+    }
+    
+    private func presentAlertWith(_ errorMessage: String) {
         let alert = UIAlertController(title: nil, message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action: UIAlertAction) in
             alert.dismiss(animated: true, completion: nil)
@@ -36,29 +75,12 @@ class PIEMainPageViewController: UIPageViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func loadViewControllersFor(_ content: [PIEContent]) {
-        self.contentViewControllers.removeAll()
-        for c in content {
-            guard let vc = UIStoryboard(name: "Content", bundle: .main).instantiateInitialViewController() as? PIEContentViewController else { return }
-            vc.content = c
-            self.contentViewControllers.append(vc)
-        }
-        DispatchQueue.main.async {
-            if let firstVC = self.contentViewControllers.first {
-                self.setViewControllers([firstVC], direction: .forward, animated: true, completion: nil)
-            }
-            else {
-                self.presentAlertWith(mainPageErrorMessage)
-            }
-        }
-    }
-    
 }
 
 // MARK: UIPageViewControllerDatasource
 
 extension PIEMainPageViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    internal func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let currentIndex = contentViewControllers.firstIndex(of: viewController) else { return nil }
         let previousIndex = currentIndex - 1
         guard previousIndex >= 0,
@@ -67,7 +89,7 @@ extension PIEMainPageViewController: UIPageViewControllerDataSource {
         return contentViewControllers[previousIndex]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    internal func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let currentIndex = contentViewControllers.firstIndex(of: viewController) else { return nil }
         let nextIndex = currentIndex + 1
         guard contentViewControllers.count != nextIndex,

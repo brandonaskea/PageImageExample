@@ -18,7 +18,7 @@ let contentKeyURL   = "m"
 let contentIDBridge = "~"
 
 struct PIEContentParser {
-    func parse(_ json: [String: Any]) -> [PIEContent] {
+    public func parse(_ json: [String: Any]) -> [PIEContent] {
         guard let items:[[String: AnyObject]] = json[contentKeyItems] as? [[String: AnyObject]] else { return [] }
         var contents:[PIEContent] = []
         for i in items {
@@ -29,7 +29,7 @@ struct PIEContentParser {
             let link = i[contentKeyLink] as? String,
             let linkURL = URL(string: link)
             else { continue }
-            let id = authorID + contentIDBridge + linkURL.lastPathComponent
+            let id = authorID + contentIDBridge + linkURL.lastPathComponent // ID = authorID~linkID
             let content:PIEContent = PIEContent.findOrCreateWithID(id, title: title, url: url)
             contents.append(content)
         }

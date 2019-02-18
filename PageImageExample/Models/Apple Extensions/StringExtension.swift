@@ -10,6 +10,9 @@ import Foundation
 
 extension String {
     func removeHTMLTags() -> String {
+        /*
+            handle errors in flickr JSON, which occur from time to time
+        */
         return replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil).replacingOccurrences(of: "<p>", with: "").replacingOccurrences(of: "</p>", with: "").replacingOccurrences(of: "\\", with: "").replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\t", with: "").replacingOccurrences(of: "<a href=\"", with: "").replacingOccurrences(of: "</a>", with: "").replacingOccurrences(of: "\"", with: "'")
     }
 }

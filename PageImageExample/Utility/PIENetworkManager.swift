@@ -14,7 +14,13 @@ let jsonPrefix = "jsonFlickrFeed"
 
 class PIENetworkManager: NSObject {
     
-    func downloadImageContent(completion: @escaping (_ errorMessage: String?, _ content: [PIEContent]) -> Void) {
+    public func downloadImageContent(completion: @escaping (_ errorMessage: String?, _ content: [PIEContent]) -> Void) {
+        /*
+            Downloads the metadata to parse
+            out each PIEContent object. If
+            there is an error the completion
+            returns an option message.
+         */
         guard let url = URL(string: urlString) else { completion(contentDownloadErrorMessage, []); return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { (data, response, error) in
@@ -29,7 +35,7 @@ class PIENetworkManager: NSObject {
         }.resume()
     }
     
-    func jsonFrom(_ data: Data) -> [String: Any] {
+    private func jsonFrom(_ data: Data) -> [String: Any] {
         do {
             guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else { return [:] }
             return json

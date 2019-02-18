@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		890C0164221AF34400089B2F /* bad.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0163221AF34400089B2F /* bad.json */; };
-		890C0166221AF5D400089B2F /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0165221AF5D400089B2F /* good.json */; };
 		890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
 		89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
 		89259BA7221ADE7000C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
@@ -22,8 +20,6 @@
 		895A8F83221A907C0068D195 /* PIENetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */; };
 		895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */; };
 		895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
-		895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */; };
-		895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */; };
 		895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
 		895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
 		895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
@@ -31,9 +27,8 @@
 		895A8F99221AB5590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
 		895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
 		8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967F28B221B1F8100888D97 /* PIEContentViewController.swift */; };
-		8967F28F221B377E00888D97 /* PIEContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967F28E221B377E00888D97 /* PIEContainerViewController.swift */; };
-		89D3B5A0221B090600C872E9 /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0165221AF5D400089B2F /* good.json */; };
-		89D3B5A1221B090600C872E9 /* bad.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0163221AF34400089B2F /* bad.json */; };
+		8967F291221B38E700888D97 /* Container.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8967F290221B38E700888D97 /* Container.storyboard */; };
+		8967F299221B5ACD00888D97 /* PIEContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8967F298221B5ACD00888D97 /* PIEContainerViewController.m */; };
 		89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
 		89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D3B5A4221B17E800C872E9 /* PIEContentView.swift */; };
 		89D3B5A7221B18BE00C872E9 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D3B5A6221B18BE00C872E9 /* Content.storyboard */; };
@@ -50,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		890C0163221AF34400089B2F /* bad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bad.json; sourceTree = "<group>"; };
-		890C0165221AF5D400089B2F /* good.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = good.json; sourceTree = "<group>"; };
 		89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentExtension.swift; sourceTree = "<group>"; };
 		895A8F53221911920068D195 /* PageImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895A8F56221911920068D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,14 +59,15 @@
 		895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIENetworkManager.swift; sourceTree = "<group>"; };
 		895A8F81221A907C0068D195 /* PageImageExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PageImageExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIENetworkManagerTests.swift; sourceTree = "<group>"; };
-		895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentOperationQueue.swift; sourceTree = "<group>"; };
-		895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentOperation.swift; sourceTree = "<group>"; };
 		895A8F8F221A9AD10068D195 /* PIEFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEFileManager.swift; sourceTree = "<group>"; };
 		895A8F92221A9B6C0068D195 /* PIECoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIECoreData.swift; sourceTree = "<group>"; };
 		895A8F94221AAB270068D195 /* PIEContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentParser.swift; sourceTree = "<group>"; };
 		895A8F98221AB5590068D195 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8967F28B221B1F8100888D97 /* PIEContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentViewController.swift; sourceTree = "<group>"; };
-		8967F28E221B377E00888D97 /* PIEContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContainerViewController.swift; sourceTree = "<group>"; };
+		8967F290221B38E700888D97 /* Container.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
+		8967F296221B5ACC00888D97 /* PageImageExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PageImageExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		8967F297221B5ACD00888D97 /* PIEContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PIEContainerViewController.h; sourceTree = "<group>"; };
+		8967F298221B5ACD00888D97 /* PIEContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIEContainerViewController.m; sourceTree = "<group>"; };
 		89D3B5A4221B17E800C872E9 /* PIEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentView.swift; sourceTree = "<group>"; };
 		89D3B5A6221B18BE00C872E9 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,8 +164,6 @@
 			children = (
 				895A8F97221AB5480068D195 /* Apple Extensions */,
 				89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */,
-				895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */,
-				895A8F94221AAB270068D195 /* PIEContentParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,13 +179,11 @@
 		895A8F89221A956F0068D195 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				895A8F8B221A98D10068D195 /* PIEContentOperationQueue.swift */,
-				895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */,
+				895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */,
+				895A8F94221AAB270068D195 /* PIEContentParser.swift */,
 				895A8F8F221A9AD10068D195 /* PIEFileManager.swift */,
 				895A8F62221911930068D195 /* LaunchScreen.storyboard */,
 				895A8F60221911930068D195 /* Assets.xcassets */,
-				890C0165221AF5D400089B2F /* good.json */,
-				890C0163221AF34400089B2F /* bad.json */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -227,7 +217,10 @@
 		8967F28D221B370300888D97 /* Container */ = {
 			isa = PBXGroup;
 			children = (
-				8967F28E221B377E00888D97 /* PIEContainerViewController.swift */,
+				8967F290221B38E700888D97 /* Container.storyboard */,
+				8967F297221B5ACD00888D97 /* PIEContainerViewController.h */,
+				8967F298221B5ACD00888D97 /* PIEContainerViewController.m */,
+				8967F296221B5ACC00888D97 /* PageImageExample-Bridging-Header.h */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -282,6 +275,7 @@
 				TargetAttributes = {
 					895A8F52221911920068D195 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					895A8F69221911930068D195 = {
 						CreatedOnToolsVersion = 10.1;
@@ -317,9 +311,8 @@
 				895A8F64221911930068D195 /* LaunchScreen.storyboard in Resources */,
 				895A8F61221911930068D195 /* Assets.xcassets in Resources */,
 				89D3B5A7221B18BE00C872E9 /* Content.storyboard in Resources */,
-				89D3B5A0221B090600C872E9 /* good.json in Resources */,
-				89D3B5A1221B090600C872E9 /* bad.json in Resources */,
 				895A8F5C221911920068D195 /* Main.storyboard in Resources */,
+				8967F291221B38E700888D97 /* Container.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,8 +320,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890C0166221AF5D400089B2F /* good.json in Resources */,
-				890C0164221AF34400089B2F /* bad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,12 +337,10 @@
 				89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */,
 				895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */,
 				895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */,
+				8967F299221B5ACD00888D97 /* PIEContainerViewController.m in Sources */,
 				89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */,
 				895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */,
-				895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */,
-				895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */,
 				8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */,
-				8967F28F221B377E00888D97 /* PIEContainerViewController.swift in Sources */,
 				895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,7 +510,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -531,6 +522,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PageImageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PageImageExample/Controllers/Container/PageImageExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,7 +533,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = A4LJ2YC4BS;
 				INFOPLIST_FILE = PageImageExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -550,6 +545,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.PageImageExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PageImageExample/Controllers/Container/PageImageExample-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

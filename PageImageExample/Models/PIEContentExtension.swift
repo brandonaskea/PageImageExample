@@ -13,20 +13,12 @@ let contentEntityName = "PIEContent"
 
 extension PIEContent {
     
-    class func getAll() -> [PIEContent] {
-        let context = PIECoreData.instance.managedObjectContext
-        let request = NSFetchRequest<PIEContent>(entityName: contentEntityName)
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-        do {
-            let fetched = try context.fetch(request)
-            return fetched
-        }
-        catch {
-            return []
-        }
-    }
-    
-    class func findOrCreateWithID(_ id: String, title: String, url: String) -> PIEContent {
+    public class func findOrCreateWithID(_ id: String, title: String, url: String) -> PIEContent {
+        /*
+            If there is already content downloaded
+            stored for the id then retreive the
+            cached PIEContent, if not, then create.
+        */
         var content: PIEContent!
         if let foundContent:PIEContent = PIECoreData.get(type: PIEContent.self, withID: id) {
             content = foundContent
@@ -41,7 +33,7 @@ extension PIEContent {
         return content
     }
     
-    func delete() {
+    public func delete() {
         guard let id = self.id,
         let foundContent:PIEContent = PIECoreData.get(type: PIEContent.self, withID: id)
         else { return }
