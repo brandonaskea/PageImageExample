@@ -30,6 +30,8 @@
 		895A8F96221AAC4A0068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
 		895A8F99221AB5590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
 		895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
+		8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967F28B221B1F8100888D97 /* PIEContentViewController.swift */; };
+		8967F28F221B377E00888D97 /* PIEContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967F28E221B377E00888D97 /* PIEContainerViewController.swift */; };
 		89D3B5A0221B090600C872E9 /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0165221AF5D400089B2F /* good.json */; };
 		89D3B5A1221B090600C872E9 /* bad.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0163221AF34400089B2F /* bad.json */; };
 		89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
@@ -70,6 +72,8 @@
 		895A8F92221A9B6C0068D195 /* PIECoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIECoreData.swift; sourceTree = "<group>"; };
 		895A8F94221AAB270068D195 /* PIEContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentParser.swift; sourceTree = "<group>"; };
 		895A8F98221AB5590068D195 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		8967F28B221B1F8100888D97 /* PIEContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentViewController.swift; sourceTree = "<group>"; };
+		8967F28E221B377E00888D97 /* PIEContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContainerViewController.swift; sourceTree = "<group>"; };
 		89D3B5A4221B17E800C872E9 /* PIEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentView.swift; sourceTree = "<group>"; };
 		89D3B5A6221B18BE00C872E9 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +158,9 @@
 		895A8F792219120B0068D195 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8967F28D221B370300888D97 /* Container */,
 				890C0162221AF24000089B2F /* Main Page */,
+				8967F28A221B1F5200888D97 /* Content */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,7 +179,6 @@
 		895A8F86221A94F70068D195 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				89D3B5A6221B18BE00C872E9 /* Content.storyboard */,
 				89D3B5A4221B17E800C872E9 /* PIEContentView.swift */,
 			);
 			path = Views;
@@ -208,6 +213,23 @@
 				895A8F98221AB5590068D195 /* StringExtension.swift */,
 			);
 			path = "Apple Extensions";
+			sourceTree = "<group>";
+		};
+		8967F28A221B1F5200888D97 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				89D3B5A6221B18BE00C872E9 /* Content.storyboard */,
+				8967F28B221B1F8100888D97 /* PIEContentViewController.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		8967F28D221B370300888D97 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				8967F28E221B377E00888D97 /* PIEContainerViewController.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +350,8 @@
 				895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */,
 				895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */,
 				895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */,
+				8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */,
+				8967F28F221B377E00888D97 /* PIEContainerViewController.swift in Sources */,
 				895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

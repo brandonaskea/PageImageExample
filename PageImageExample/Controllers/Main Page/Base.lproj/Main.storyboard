@@ -11,10 +11,10 @@
         <!--Main Page View Controller-->
         <scene sceneID="2lB-IJ-qef">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Sr5-u5-vi4" customClass="PIEMainPageViewController" customModule="PageImageExample" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Sr5-u5-vi4" customClass="PIEMainPageViewController" customModule="PageImageExample" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9K-SN-Pv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="179"/>
+            <point key="canvasLocation" x="134" y="139"/>
         </scene>
     </scenes>
 </document>

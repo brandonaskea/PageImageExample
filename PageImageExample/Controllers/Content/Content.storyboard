@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Content View Controller-->
         <scene sceneID="J6X-ya-yFK">
             <objects>
-                <viewController id="rRA-VQ-Ies" sceneMemberID="viewController">
+                <viewController id="rRA-VQ-Ies" customClass="PIEContentViewController" customModule="PageImageExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ete-cd-egL" customClass="PIEContentView" customModule="PageImageExample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-pK-K8W">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7ew-pK-K8W">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xn-W4-mcD">
@@ -27,22 +27,30 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="zch-bt-TYn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="2"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Hkr-FI-52h">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YSc-bQ-a9d" firstAttribute="bottom" secondItem="3xn-W4-mcD" secondAttribute="bottom" constant="40" id="4eH-4l-zI3"/>
                             <constraint firstItem="7ew-pK-K8W" firstAttribute="top" secondItem="ete-cd-egL" secondAttribute="top" id="9bP-rd-wGU"/>
+                            <constraint firstItem="Hkr-FI-52h" firstAttribute="centerY" secondItem="ete-cd-egL" secondAttribute="centerY" id="HcR-QR-nWf"/>
                             <constraint firstItem="3xn-W4-mcD" firstAttribute="leading" secondItem="YSc-bQ-a9d" secondAttribute="leading" constant="10" id="TPT-4J-15H"/>
                             <constraint firstItem="7ew-pK-K8W" firstAttribute="leading" secondItem="YSc-bQ-a9d" secondAttribute="leading" id="aPW-M0-RC3"/>
+                            <constraint firstItem="Hkr-FI-52h" firstAttribute="centerX" secondItem="ete-cd-egL" secondAttribute="centerX" id="faU-cN-y6U"/>
                             <constraint firstItem="YSc-bQ-a9d" firstAttribute="trailing" secondItem="7ew-pK-K8W" secondAttribute="trailing" id="fdU-vv-Atm"/>
                             <constraint firstItem="YSc-bQ-a9d" firstAttribute="trailing" secondItem="3xn-W4-mcD" secondAttribute="trailing" constant="10" id="mhg-Uw-5HW"/>
                             <constraint firstItem="YSc-bQ-a9d" firstAttribute="bottom" secondItem="7ew-pK-K8W" secondAttribute="bottom" id="pc9-Dx-xiL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YSc-bQ-a9d"/>
                         <connections>
+                            <outlet property="activityIndicator" destination="Hkr-FI-52h" id="c5C-Oj-pFa"/>
                             <outlet property="contentImageView" destination="7ew-pK-K8W" id="x7l-tS-b5K"/>
                             <outlet property="titleLabel" destination="3xn-W4-mcD" id="Fk0-Ul-OHf"/>
                         </connections>

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Brandon Askea. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct PIEFileManager {
 
@@ -17,11 +17,20 @@ struct PIEFileManager {
     }
     
     static func deleteFileWithID(_ id: String) -> Bool {
-        let path = PIEFileManager.filePathForContentWithID(id)
+        let filePath = PIEFileManager.filePathForContentWithID(id)
         do {
-            try FileManager.default.removeItem(at: path)
+            try FileManager.default.removeItem(at: filePath)
             return true
         } catch let error { print(error.localizedDescription); return false }
+    }
+    
+    static func store(image: UIImage, for id: String) {
+        let filePath = PIEFileManager.filePathForContentWithID(id)
+        let imageData = image.jpegData(compressionQuality: 1.0)
+        if         FileManager.default.createFile(atPath: filePath.path, contents: imageData, attributes: nil) {
+            print("Created File \(id)")
+        }
+
     }
     
     static func filePathForContentWithID(_ id: String) -> URL {
