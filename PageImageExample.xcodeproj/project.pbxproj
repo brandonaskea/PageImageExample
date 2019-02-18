@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890C0164221AF34400089B2F /* bad.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0163221AF34400089B2F /* bad.json */; };
+		890C0166221AF5D400089B2F /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0165221AF5D400089B2F /* good.json */; };
+		890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
+		89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
+		89259BA7221ADE7000C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
 		895A8F57221911920068D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F56221911920068D195 /* AppDelegate.swift */; };
 		895A8F5C221911920068D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F5A221911920068D195 /* Main.storyboard */; };
 		895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
@@ -21,6 +26,15 @@
 		895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */; };
 		895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
 		895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
+		895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
+		895A8F96221AAC4A0068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
+		895A8F99221AB5590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
+		895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
+		89D3B5A0221B090600C872E9 /* good.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0165221AF5D400089B2F /* good.json */; };
+		89D3B5A1221B090600C872E9 /* bad.json in Resources */ = {isa = PBXBuildFile; fileRef = 890C0163221AF34400089B2F /* bad.json */; };
+		89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
+		89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D3B5A4221B17E800C872E9 /* PIEContentView.swift */; };
+		89D3B5A7221B18BE00C872E9 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D3B5A6221B18BE00C872E9 /* Content.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		890C0163221AF34400089B2F /* bad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bad.json; sourceTree = "<group>"; };
+		890C0165221AF5D400089B2F /* good.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = good.json; sourceTree = "<group>"; };
+		89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentExtension.swift; sourceTree = "<group>"; };
 		895A8F53221911920068D195 /* PageImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895A8F56221911920068D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		895A8F5B221911920068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +68,10 @@
 		895A8F8D221A98EF0068D195 /* PIEContentOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentOperation.swift; sourceTree = "<group>"; };
 		895A8F8F221A9AD10068D195 /* PIEFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEFileManager.swift; sourceTree = "<group>"; };
 		895A8F92221A9B6C0068D195 /* PIECoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIECoreData.swift; sourceTree = "<group>"; };
+		895A8F94221AAB270068D195 /* PIEContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentParser.swift; sourceTree = "<group>"; };
+		895A8F98221AB5590068D195 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		89D3B5A4221B17E800C872E9 /* PIEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentView.swift; sourceTree = "<group>"; };
+		89D3B5A6221B18BE00C872E9 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		890C0162221AF24000089B2F /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F5A221911920068D195 /* Main.storyboard */,
+				895A8F7A221912990068D195 /* PIEMainPageViewController.swift */,
+			);
+			path = "Main Page";
+			sourceTree = "<group>";
+		};
+		890C0167221AF5E700089B2F /* PIENetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */,
+			);
+			path = PIENetworkManagerTests;
+			sourceTree = "<group>";
+		};
 		895A8F4A221911920068D195 = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +134,9 @@
 				895A8F7C221A8A980068D195 /* Models */,
 				895A8F86221A94F70068D195 /* Views */,
 				895A8F792219120B0068D195 /* Controllers */,
+				895A8F91221A9B430068D195 /* CoreData */,
 				895A8F89221A956F0068D195 /* Utility */,
 				895A8F65221911930068D195 /* Info.plist */,
-				895A8F91221A9B430068D195 /* CoreData */,
 			);
 			path = PageImageExample;
 			sourceTree = "<group>";
@@ -106,9 +144,9 @@
 		895A8F6D221911930068D195 /* PageImageExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				895A8F70221911930068D195 /* Info.plist */,
-				895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */,
 				895A8F81221A907C0068D195 /* PageImageExampleTests-Bridging-Header.h */,
+				895A8F70221911930068D195 /* Info.plist */,
+				890C0167221AF5E700089B2F /* PIENetworkManagerTests */,
 			);
 			path = PageImageExampleTests;
 			sourceTree = "<group>";
@@ -116,8 +154,7 @@
 		895A8F792219120B0068D195 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				895A8F5A221911920068D195 /* Main.storyboard */,
-				895A8F7A221912990068D195 /* PIEMainPageViewController.swift */,
+				890C0162221AF24000089B2F /* Main Page */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,7 +162,10 @@
 		895A8F7C221A8A980068D195 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				895A8F97221AB5480068D195 /* Apple Extensions */,
+				89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */,
 				895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */,
+				895A8F94221AAB270068D195 /* PIEContentParser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +173,8 @@
 		895A8F86221A94F70068D195 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89D3B5A6221B18BE00C872E9 /* Content.storyboard */,
+				89D3B5A4221B17E800C872E9 /* PIEContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +187,8 @@
 				895A8F8F221A9AD10068D195 /* PIEFileManager.swift */,
 				895A8F62221911930068D195 /* LaunchScreen.storyboard */,
 				895A8F60221911930068D195 /* Assets.xcassets */,
+				890C0165221AF5D400089B2F /* good.json */,
+				890C0163221AF34400089B2F /* bad.json */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -156,6 +200,14 @@
 				895A8F92221A9B6C0068D195 /* PIECoreData.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		895A8F97221AB5480068D195 /* Apple Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				895A8F98221AB5590068D195 /* StringExtension.swift */,
+			);
+			path = "Apple Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +294,9 @@
 			files = (
 				895A8F64221911930068D195 /* LaunchScreen.storyboard in Resources */,
 				895A8F61221911930068D195 /* Assets.xcassets in Resources */,
+				89D3B5A7221B18BE00C872E9 /* Content.storyboard in Resources */,
+				89D3B5A0221B090600C872E9 /* good.json in Resources */,
+				89D3B5A1221B090600C872E9 /* bad.json in Resources */,
 				895A8F5C221911920068D195 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +305,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890C0166221AF5D400089B2F /* good.json in Resources */,
+				890C0164221AF34400089B2F /* bad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +319,16 @@
 			files = (
 				895A8F57221911920068D195 /* AppDelegate.swift in Sources */,
 				895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */,
+				895A8F99221AB5590068D195 /* StringExtension.swift in Sources */,
 				895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */,
+				89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */,
 				895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */,
 				895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */,
+				89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */,
 				895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */,
 				895A8F8E221A98EF0068D195 /* PIEContentOperation.swift in Sources */,
 				895A8F8C221A98D10068D195 /* PIEContentOperationQueue.swift in Sources */,
+				895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +338,12 @@
 			files = (
 				895A8F83221A907C0068D195 /* PIENetworkManagerTests.swift in Sources */,
 				895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */,
+				895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */,
+				89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */,
 				895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */,
+				89259BA7221ADE7000C5C490 /* PIEContentExtension.swift in Sources */,
+				895A8F96221AAC4A0068D195 /* PIEContentParser.swift in Sources */,
+				890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

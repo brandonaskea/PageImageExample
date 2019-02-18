@@ -8,8 +8,9 @@
 
 import UIKit
 
-let urlString = "https://api.flickr.com/services/feeds/photos_public.gne?format=json"
+let urlString = "https://api.flickr.com/services/feeds/photos_public.gne?format=json" + "&nojsoncallback=1"
 let contentDownloadErrorMessage = "There was an error downloading content."
+let jsonPrefix = "jsonFlickrFeed"
 
 class PIENetworkManager: NSObject {
     
@@ -17,13 +18,26 @@ class PIENetworkManager: NSObject {
         guard let url = URL(string: urlString) else { completion(contentDownloadErrorMessage, []); return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { (data, response, error) in
-            if let err = error {
-                completion(err.localizedDescription, [])
+            if let data = data {
+                let json = self.jsonFrom(data)
+                completion(nil, PIEContentParser().parse(json))
             }
             else {
-                completion(nil, [])
+                completion(error?.localizedDescription ?? contentDownloadErrorMessage, [])
             }
+            
         }.resume()
+    }
+    
+    func jsonFrom(_ data: Data) -> [String: Any] {
+        do {
+            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else { return [:] }
+            return json
+        }
+        catch let error {
+            print("Error | \(error.localizedDescription)")
+            return [:]
+        }
     }
 
 }
