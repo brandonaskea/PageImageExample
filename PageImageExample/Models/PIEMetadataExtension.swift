@@ -1,5 +1,5 @@
 //
-//  PIEContentExtension.swift
+//  PIEMetadataExtension.swift
 //  PageImageExample
 //
 //  Created by Brandon Askea on 2/18/19.
@@ -9,22 +9,22 @@
 import Foundation
 import CoreData
 
-let contentEntityName = "PIEContent"
+private let contentEntityName = "PIEMetadata"
 
-extension PIEContent {
+extension PIEMetadata {
     
-    public class func findOrCreateWithID(_ id: String, title: String, url: String) -> PIEContent {
+    public class func findOrCreateWithID(_ id: String, title: String, url: String) -> PIEMetadata {
         /*
             If there is already content downloaded
             stored for the id then retreive the
             cached PIEContent, if not, then create.
         */
-        var content: PIEContent!
-        if let foundContent:PIEContent = PIECoreData.get(type: PIEContent.self, withID: id) {
+        var content: PIEMetadata!
+        if let foundContent:PIEMetadata = PIECoreData.get(type: PIEMetadata.self, withID: id) {
             content = foundContent
         }
         else {
-            let createdContent:PIEContent = PIECoreData.insert(type: PIEContent.self)
+            let createdContent:PIEMetadata = PIECoreData.insert(type: PIEMetadata.self)
             createdContent.id = id
             createdContent.title = title
             createdContent.url = url
@@ -34,13 +34,11 @@ extension PIEContent {
     }
     
     public func delete() {
-        guard let id = self.id,
-        let foundContent:PIEContent = PIECoreData.get(type: PIEContent.self, withID: id)
-        else { return }
+        guard let id = self.id else { return }
         if PIEFileManager.deleteFileWithID(id) {
             print("Deleted File \(id)")
         }
-        PIECoreData.delete(managedObject: foundContent)
+        PIECoreData.delete(managedObject: self)
     }
     
 }

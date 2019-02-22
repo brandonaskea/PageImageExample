@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
-		89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
-		89259BA7221ADE7000C5C490 /* PIEContentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */; };
+		89259BA6221ADE6D00C5C490 /* PIEMetadataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */; };
+		89259BA7221ADE7000C5C490 /* PIEMetadataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */; };
 		895A8F57221911920068D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F56221911920068D195 /* AppDelegate.swift */; };
 		895A8F5C221911920068D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F5A221911920068D195 /* Main.storyboard */; };
 		895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
@@ -22,8 +22,8 @@
 		895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
 		895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
 		895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
-		895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
-		895A8F96221AAC4A0068D195 /* PIEContentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEContentParser.swift */; };
+		895A8F95221AAB270068D195 /* PIEMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEMetadataParser.swift */; };
+		895A8F96221AAC4A0068D195 /* PIEMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEMetadataParser.swift */; };
 		895A8F99221AB5590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
 		895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F98221AB5590068D195 /* StringExtension.swift */; };
 		8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8967F28B221B1F8100888D97 /* PIEContentViewController.swift */; };
@@ -45,7 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentExtension.swift; sourceTree = "<group>"; };
+		89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEMetadataExtension.swift; sourceTree = "<group>"; };
+		8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PageImageExample 2.xcdatamodel"; sourceTree = "<group>"; };
 		895A8F53221911920068D195 /* PageImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895A8F56221911920068D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		895A8F5B221911920068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,7 +62,7 @@
 		895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIENetworkManagerTests.swift; sourceTree = "<group>"; };
 		895A8F8F221A9AD10068D195 /* PIEFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEFileManager.swift; sourceTree = "<group>"; };
 		895A8F92221A9B6C0068D195 /* PIECoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIECoreData.swift; sourceTree = "<group>"; };
-		895A8F94221AAB270068D195 /* PIEContentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentParser.swift; sourceTree = "<group>"; };
+		895A8F94221AAB270068D195 /* PIEMetadataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEMetadataParser.swift; sourceTree = "<group>"; };
 		895A8F98221AB5590068D195 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		8967F28B221B1F8100888D97 /* PIEContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentViewController.swift; sourceTree = "<group>"; };
 		8967F290221B38E700888D97 /* Container.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Container.storyboard; sourceTree = "<group>"; };
@@ -163,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				895A8F97221AB5480068D195 /* Apple Extensions */,
-				89259BA5221ADE6D00C5C490 /* PIEContentExtension.swift */,
+				89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */,
-				895A8F94221AAB270068D195 /* PIEContentParser.swift */,
+				895A8F94221AAB270068D195 /* PIEMetadataParser.swift */,
 				895A8F8F221A9AD10068D195 /* PIEFileManager.swift */,
 				895A8F62221911930068D195 /* LaunchScreen.storyboard */,
 				895A8F60221911930068D195 /* Assets.xcassets */,
@@ -334,14 +335,14 @@
 				895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */,
 				895A8F99221AB5590068D195 /* StringExtension.swift in Sources */,
 				895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */,
-				89259BA6221ADE6D00C5C490 /* PIEContentExtension.swift in Sources */,
+				89259BA6221ADE6D00C5C490 /* PIEMetadataExtension.swift in Sources */,
 				895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */,
 				895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */,
 				8967F299221B5ACD00888D97 /* PIEContainerViewController.m in Sources */,
 				89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */,
 				895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */,
 				8967F28C221B1F8100888D97 /* PIEContentViewController.swift in Sources */,
-				895A8F95221AAB270068D195 /* PIEContentParser.swift in Sources */,
+				895A8F95221AAB270068D195 /* PIEMetadataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +355,8 @@
 				895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */,
 				89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */,
 				895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */,
-				89259BA7221ADE7000C5C490 /* PIEContentExtension.swift in Sources */,
-				895A8F96221AAC4A0068D195 /* PIEContentParser.swift in Sources */,
+				89259BA7221ADE7000C5C490 /* PIEMetadataExtension.swift in Sources */,
+				895A8F96221AAC4A0068D195 /* PIEMetadataParser.swift in Sources */,
 				890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,9 +635,10 @@
 		895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */,
 				895A8F5E221911920068D195 /* PageImageExample.xcdatamodel */,
 			);
-			currentVersion = 895A8F5E221911920068D195 /* PageImageExample.xcdatamodel */;
+			currentVersion = 8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */;
 			path = PageImageExample.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

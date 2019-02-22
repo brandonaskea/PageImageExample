@@ -10,13 +10,13 @@ import UIKit
 
 class PIEContentViewController: UIViewController {
     
-    public var content: PIEContent!
+    public var metadata: PIEMetadata!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let contentView = view as? PIEContentView else { return }
         contentView.delegate = self
-        contentView.load(content: content)
+        contentView.loadContentWith(metadata)
     }
 
 }

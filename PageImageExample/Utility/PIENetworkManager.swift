@@ -8,13 +8,41 @@
 
 import UIKit
 
-let urlString = "https://api.flickr.com/services/feeds/photos_public.gne?format=json" + "&nojsoncallback=1"
-let contentDownloadErrorMessage = "There was an error downloading content."
-let jsonPrefix = "jsonFlickrFeed"
+private let urlString = "https://api.flickr.com/services/feeds/photos_public.gne?format=json" + "&nojsoncallback=1"
+private let contentDownloadErrorMessage = "There was an error downloading content."
 
 class PIENetworkManager: NSObject {
     
-    public func downloadImageContent(completion: @escaping (_ errorMessage: String?, _ content: [PIEContent]) -> Void) {
+    public func downloadImageAt(_ url: URL, completion: @escaping (_ errorMessage: String?, _ image: UIImage?) -> Void) {
+        /*
+            Downloads the image from the
+            URL asynronously and sends
+            the result in the completion
+            callback on the main thread.
+        */
+        DispatchQueue.global().async {
+            do {
+                let imageData = try Data(contentsOf: url)
+                if let image = UIImage(data: imageData) {
+                    DispatchQueue.main.async {
+                        completion(nil, image)
+                    }
+                }
+                else {
+                    DispatchQueue.main.async {
+                        completion(contentDownloadErrorMessage, nil)
+                    }
+                }
+            }
+            catch let error {
+                DispatchQueue.main.async {
+                    completion(error.localizedDescription, nil)
+                }
+            }
+        }
+    }
+    
+    public func downloadImageContent(completion: @escaping (_ errorMessage: String?, _ content: [PIEMetadata]) -> Void) {
         /*
             Downloads the metadata to parse
             out each PIEContent object. If
@@ -25,25 +53,13 @@ class PIENetworkManager: NSObject {
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { (data, response, error) in
             if let data = data {
-                let json = self.jsonFrom(data)
-                completion(nil, PIEContentParser().parse(json))
+                completion(nil, PIEMetadataParser().parseJSON(data))
             }
             else {
                 completion(error?.localizedDescription ?? contentDownloadErrorMessage, [])
             }
             
         }.resume()
-    }
-    
-    private func jsonFrom(_ data: Data) -> [String: Any] {
-        do {
-            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: AnyObject] else { return [:] }
-            return json
-        }
-        catch let error {
-            print("Error | \(error.localizedDescription)")
-            return [:]
-        }
     }
 
 }

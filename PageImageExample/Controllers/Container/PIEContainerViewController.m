@@ -56,19 +56,21 @@
     /*
         Pull-To-Refresh
         When the user drags downward beyond
-        the threshold, send a notification
-        to Pull-To-Refresh the content.
+        the threshold, tell the MainPageVC
+        to refresh the content.
     */
     if (scrollView.contentOffset.y < -80) {
         self.refreshControl.alpha = 1;
         [self.mainPageVC refresh];
     }
+    else {
+        [self.tableView setContentOffset:CGPointZero animated:YES];
+    }
 }
-
 
 - (void)didFinishRefreshing {
     self.refreshControl.alpha = 0;
-    self.tableView.contentOffset = CGPointZero;
+    [self.tableView setContentOffset:CGPointZero animated:YES];
 }
 
 @end

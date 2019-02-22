@@ -8,7 +8,7 @@
 
 import UIKit
 
-let contentViewErrorMessage = "There was an error downloading the content."
+private let contentViewErrorMessage = "There was an error downloading the content."
 
 protocol PIEContentViewDelegate {
     func present(_ alert: UIAlertController)
@@ -22,11 +22,11 @@ class PIEContentView: UIView {
     
     var delegate: PIEContentViewDelegate!
     
-    public func load(content: PIEContent) {
+    public func loadContentWith(_ metadata: PIEMetadata) {
+    
+        titleLabel.text = metadata.title
         
-        titleLabel.text = content.title
-        
-        guard let id = content.id
+        guard let id = metadata.id
         else { self.presentAlert(); return }
         
         /*
@@ -36,7 +36,7 @@ class PIEContentView: UIView {
             download the image and cache it
             along with the metadata id.
         */
-        if content.isDownloaded {
+        if metadata.isDownloaded {
             let filePath = PIEFileManager.filePathForContentWithID(id)
             let image = UIImage(contentsOfFile: filePath.path)
             contentImageView.image = image
@@ -44,42 +44,29 @@ class PIEContentView: UIView {
         else {
             activityIndicator.startAnimating()
             activityIndicator.hidesWhenStopped = true
-            guard let contentURL = content.url,
+            guard let contentURL = metadata.url,
             let url = URL(string: contentURL)
             else {
                 self.presentAlert()
                 activityIndicator.stopAnimating()
                 return
             }
-            DispatchQueue.global().async {
-                do {
-                    let imageData = try Data(contentsOf: url)
-                    DispatchQueue.main.async {
-                        if let image = UIImage(data: imageData) {
-                            PIEFileManager.store(image: image, for: id)
-                            content.isDownloaded = true
-                            PIECoreData.save()
-                            self.contentImageView.image = image
-                            self.activityIndicator.stopAnimating()
-                        }
-                        else {
-                            self.presentAlert()
-                            self.activityIndicator.stopAnimating()
-                        }
-                    }
+            PIENetworkManager().downloadImageAt(url) { (errorMessage, image) in
+                if let image = image {
+                    PIEFileManager.store(image: image, for: id)
+                    metadata.isDownloaded = true
+                    PIECoreData.save()
+                    self.contentImageView.image = image
                 }
-                catch let error {
-                    DispatchQueue.main.async {
-                        self.activityIndicator.stopAnimating()
-                        self.activityIndicator.isHidden = true
-                        self.presentAlert(error.localizedDescription)
-                    }
+                else {
+                    self.presentAlert(errorMessage)
                 }
+                self.activityIndicator.stopAnimating()
             }
         }
     }
     
-    func presentAlert(_ errorMessage: String = contentViewErrorMessage) {
+    func presentAlert(_ errorMessage: String? = contentViewErrorMessage) {
         /*
             Tell the delegate (ContentViewController)
             to present an alert that describes some

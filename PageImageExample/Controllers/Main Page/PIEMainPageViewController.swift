@@ -8,8 +8,7 @@
 
 import UIKit
 
-let mainPageErrorMessage = "The was an error loading the main page."
-let pullToRefreshNotification = "refresh"
+private let mainPageErrorMessage = "The was an error loading the main page."
 
 @objc protocol PIEMainPageViewControllerDelegate {
     func didFinishRefreshing()
@@ -23,8 +22,8 @@ class PIEMainPageViewController: UIPageViewController {
     
     override internal func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = self
-        self.view.backgroundColor = .black
+        dataSource = self
+        view.backgroundColor = .black
         refresh()
     }
     
@@ -42,7 +41,7 @@ class PIEMainPageViewController: UIPageViewController {
         }
     }
     
-    private func loadViewControllersFor(_ content: [PIEContent]) {
+    private func loadViewControllersFor(_ metadata: [PIEMetadata]) {
         /*
             Iterate through the content
             objects and create the view
@@ -51,10 +50,10 @@ class PIEMainPageViewController: UIPageViewController {
             display.
         */
         self.contentViewControllers.removeAll()
-        for c in content {
+        for md in metadata {
             guard let vc = UIStoryboard(name: "Content", bundle: .main).instantiateInitialViewController() as? PIEContentViewController else { continue }
-            vc.content = c
-            self.contentViewControllers.append(vc)
+            vc.metadata = md
+            contentViewControllers.append(vc)
         }
         DispatchQueue.main.async {
             if let firstVC = self.contentViewControllers.first {
@@ -72,7 +71,7 @@ class PIEMainPageViewController: UIPageViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action: UIAlertAction) in
             alert.dismiss(animated: true, completion: nil)
         }))
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
 }
