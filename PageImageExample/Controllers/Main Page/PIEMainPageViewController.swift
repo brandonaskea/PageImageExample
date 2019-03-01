@@ -31,12 +31,12 @@ class PIEMainPageViewController: UIPageViewController {
         /*
             Load the content
         */
-        PIENetworkManager().downloadImageContent { (errorMessage, content) in
+        PIENetworkManager().downloadImageMetadata { (errorMessage, metadata) in
             if let errorMessage = errorMessage {
                 self.presentAlertWith(errorMessage)
             }
             else {
-                self.loadViewControllersFor(content)
+                self.loadViewControllersFor(metadata)
             }
         }
     }
@@ -96,4 +96,5 @@ extension PIEMainPageViewController: UIPageViewControllerDataSource {
         else { return nil }
         return contentViewControllers[nextIndex]
     }
+    
 }

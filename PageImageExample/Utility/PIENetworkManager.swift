@@ -42,7 +42,7 @@ class PIENetworkManager: NSObject {
         }
     }
     
-    public func downloadImageContent(completion: @escaping (_ errorMessage: String?, _ content: [PIEMetadata]) -> Void) {
+    public func downloadImageMetadata(completion: @escaping (_ errorMessage: String?, _ metadata: [PIEMetadata]) -> Void) {
         /*
             Downloads the metadata to parse
             out each PIEContent object. If
@@ -52,13 +52,15 @@ class PIENetworkManager: NSObject {
         guard let url = URL(string: urlString) else { completion(contentDownloadErrorMessage, []); return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url) { (data, response, error) in
-            if let data = data {
-                completion(nil, PIEMetadataParser().parseJSON(data))
+            DispatchQueue.main.async {
+                if let data = data {
+                    completion(nil, PIEMetadataParser().parseJSON(data))
+                    
+                }
+                else {
+                    completion(error?.localizedDescription ?? contentDownloadErrorMessage, [])
+                }
             }
-            else {
-                completion(error?.localizedDescription ?? contentDownloadErrorMessage, [])
-            }
-            
         }.resume()
     }
 
