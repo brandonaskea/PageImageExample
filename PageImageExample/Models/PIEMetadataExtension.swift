@@ -9,8 +9,6 @@
 import Foundation
 import CoreData
 
-private let contentEntityName = "PIEMetadata"
-
 extension PIEMetadata {
     
     public class func findOrCreateWithID(_ id: String, title: String, url: String) -> PIEMetadata {

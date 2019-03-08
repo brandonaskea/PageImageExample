@@ -23,13 +23,11 @@ class PIENetworkManager: NSObject {
         DispatchQueue.global().async {
             do {
                 let imageData = try Data(contentsOf: url)
-                if let image = UIImage(data: imageData) {
-                    DispatchQueue.main.async {
+                DispatchQueue.main.async {
+                    if let image = UIImage(data: imageData) {
                         completion(nil, image)
                     }
-                }
-                else {
-                    DispatchQueue.main.async {
+                    else {
                         completion(contentDownloadErrorMessage, nil)
                     }
                 }

@@ -12,14 +12,12 @@
 		89259BA7221ADE7000C5C490 /* PIEMetadataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */; };
 		895A8F57221911920068D195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F56221911920068D195 /* AppDelegate.swift */; };
 		895A8F5C221911920068D195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F5A221911920068D195 /* Main.storyboard */; };
-		895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
 		895A8F61221911930068D195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F60221911930068D195 /* Assets.xcassets */; };
 		895A8F64221911930068D195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895A8F62221911930068D195 /* LaunchScreen.storyboard */; };
 		895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7A221912990068D195 /* PIEMainPageViewController.swift */; };
 		895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */; };
 		895A8F83221A907C0068D195 /* PIENetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F82221A907C0068D195 /* PIENetworkManagerTests.swift */; };
 		895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F7D221A8AFC0068D195 /* PIENetworkManager.swift */; };
-		895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */; };
 		895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F8F221A9AD10068D195 /* PIEFileManager.swift */; };
 		895A8F93221A9B6C0068D195 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
 		895A8F95221AAB270068D195 /* PIEMetadataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F94221AAB270068D195 /* PIEMetadataParser.swift */; };
@@ -32,6 +30,7 @@
 		89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895A8F92221A9B6C0068D195 /* PIECoreData.swift */; };
 		89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D3B5A4221B17E800C872E9 /* PIEContentView.swift */; };
 		89D3B5A7221B18BE00C872E9 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D3B5A6221B18BE00C872E9 /* Content.storyboard */; };
+		89D68CF12232FB2700E0135E /* PageImageExampleModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 89D68CEF2232FB2700E0135E /* PageImageExampleModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +45,9 @@
 
 /* Begin PBXFileReference section */
 		89259BA5221ADE6D00C5C490 /* PIEMetadataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEMetadataExtension.swift; sourceTree = "<group>"; };
-		8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PageImageExample 2.xcdatamodel"; sourceTree = "<group>"; };
 		895A8F53221911920068D195 /* PageImageExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PageImageExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		895A8F56221911920068D195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		895A8F5B221911920068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		895A8F5E221911920068D195 /* PageImageExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageImageExample.xcdatamodel; sourceTree = "<group>"; };
 		895A8F60221911930068D195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		895A8F63221911930068D195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		895A8F65221911930068D195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +68,7 @@
 		8967F298221B5ACD00888D97 /* PIEContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PIEContainerViewController.m; sourceTree = "<group>"; };
 		89D3B5A4221B17E800C872E9 /* PIEContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PIEContentView.swift; sourceTree = "<group>"; };
 		89D3B5A6221B18BE00C872E9 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
+		89D68CF02232FB2700E0135E /* PageImageExampleModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PageImageExampleModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +190,7 @@
 		895A8F91221A9B430068D195 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */,
+				89D68CEF2232FB2700E0135E /* PageImageExampleModel.xcdatamodeld */,
 				895A8F92221A9B6C0068D195 /* PIECoreData.swift */,
 			);
 			path = CoreData;
@@ -334,9 +332,9 @@
 				895A8F57221911920068D195 /* AppDelegate.swift in Sources */,
 				895A8F7E221A8AFC0068D195 /* PIENetworkManager.swift in Sources */,
 				895A8F99221AB5590068D195 /* StringExtension.swift in Sources */,
+				89D68CF12232FB2700E0135E /* PageImageExampleModel.xcdatamodeld in Sources */,
 				895A8F7B221912990068D195 /* PIEMainPageViewController.swift in Sources */,
 				89259BA6221ADE6D00C5C490 /* PIEMetadataExtension.swift in Sources */,
-				895A8F5F221911920068D195 /* PageImageExample.xcdatamodeld in Sources */,
 				895A8F90221A9AD10068D195 /* PIEFileManager.swift in Sources */,
 				8967F299221B5ACD00888D97 /* PIEContainerViewController.m in Sources */,
 				89D3B5A5221B17E800C872E9 /* PIEContentView.swift in Sources */,
@@ -354,7 +352,6 @@
 				895A8F84221A91120068D195 /* PIENetworkManager.swift in Sources */,
 				895A8F9A221AB6590068D195 /* StringExtension.swift in Sources */,
 				89D3B5A3221B105E00C872E9 /* PIECoreData.swift in Sources */,
-				895A8F8A221A97A40068D195 /* PageImageExample.xcdatamodeld in Sources */,
 				89259BA7221ADE7000C5C490 /* PIEMetadataExtension.swift in Sources */,
 				895A8F96221AAC4A0068D195 /* PIEMetadataParser.swift in Sources */,
 				890C0169221AF83A00089B2F /* PIEFileManager.swift in Sources */,
@@ -632,14 +629,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		895A8F5D221911920068D195 /* PageImageExample.xcdatamodeld */ = {
+		89D68CEF2232FB2700E0135E /* PageImageExampleModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */,
-				895A8F5E221911920068D195 /* PageImageExample.xcdatamodel */,
+				89D68CF02232FB2700E0135E /* PageImageExampleModel.xcdatamodel */,
 			);
-			currentVersion = 8933E92F221FB8F900DF2639 /* PageImageExample 2.xcdatamodel */;
-			path = PageImageExample.xcdatamodeld;
+			currentVersion = 89D68CF02232FB2700E0135E /* PageImageExampleModel.xcdatamodel */;
+			path = PageImageExampleModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

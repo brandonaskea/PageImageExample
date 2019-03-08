@@ -45,7 +45,7 @@ class PIECoreData: NSObject {
     // MARK: Core Data Stack
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "PageImageExample")
+        let container = NSPersistentContainer(name: "PageImageExampleModel")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -55,7 +55,7 @@ class PIECoreData: NSObject {
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
-        let modelURL = Bundle.main.url(forResource: "PageImageExample", withExtension: "momd")!
+        let modelURL = Bundle.main.url(forResource: "PageImageExampleModel", withExtension: "momd")!
         return NSManagedObjectModel(contentsOf: modelURL)!
     }()
     
